@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+users.json
+file_permissions.json
+*.txt
+.vscode/
