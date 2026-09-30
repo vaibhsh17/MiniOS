@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from file_manager import create_file, write_file, read_file, delete_file
 from process_manager import start_process, list_processes, stop_process, processes
 from memory_manager import show_memory, allocate_memory, free_memory
@@ -7,6 +8,13 @@ from user_manager import create_user, list_users, login_user, get_user_role
 
 def clear_screen():
     os.system("cls")
+    print("""
+================================
+        Welcome to MiniOS
+================================
+Educational OS Simulator
+Type 'help' to see commands.
+""")
 
 def show_info():
     print("""
@@ -46,6 +54,11 @@ create_user - Create a new user
 users   - Show all users
 login   - Login as user
 role    - Show user role
+whoami  - Show current logged-in user
+pwd - Show current working directory
+ls  - List files and folders
+date    - Show current date and time
+systeminfo  - Show system information
 """)
 
 def start_minios():
@@ -114,6 +127,56 @@ Type 'help' to see commands.
 
                 if login_user(username, password):
                     current_user = username
+
+        elif command.startswith("role "):
+            username = command[5:]
+
+            role = get_user_role(username)
+
+            if role:
+                print(f"User '{username}' has role: {role}")
+            else:
+                print("User not found.")
+
+
+        elif command == "logout":
+            current_user = "guest"
+            print("Logged out successfully.")
+
+        elif command == "whoami":
+            print(f"current user: {current_user}")
+
+        elif command == "pwd":
+            print(os.getcwd())
+
+        elif command == "ls":
+            files = os.listdir()
+
+            if not files:
+                print("Directory is empty.")
+            else:
+                print("\nFiles and Folders")
+                print("--------------------")
+
+                for item in files:
+                    print(item)
+
+        elif command == "date":
+            current_date = datetime.now()
+            print(current_date.strftime("%d-%m-%Y %H:%M:%S"))
+
+        elif command == "systeminfo":
+            print("""
+===============================
+        System Information
+===============================
+OS Name: MiniOS
+Version: 1.0
+Language: Python
+""")
+            print(f"Current_User: {current_user}")
+            print(f"Working Directory: {os.getcwd()}")
+            print("===============================")
 
         elif command.startswith("role "):
             username = command[5:]
