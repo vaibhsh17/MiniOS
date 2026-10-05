@@ -4,3 +4,4 @@ users.json
 file_permissions.json
 *.txt
 .vscode/
+disk_storage.json

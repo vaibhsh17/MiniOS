@@ -3,6 +3,7 @@ from datetime import datetime
 from file_manager import create_file, write_file, read_file, delete_file
 from process_manager import start_process, list_processes, stop_process, processes
 from memory_manager import show_memory, allocate_memory, free_memory
+from disk_manager import show_disk, disk_info, allocate_disk, free_disk_space
 from cpu_schedulor import fcfs_schedule, round_robin_schedule, priority_schedule
 from user_manager import create_user, list_users, login_user, get_user_role
 
@@ -59,6 +60,10 @@ pwd - Show current working directory
 ls  - List files and folders
 date    - Show current date and time
 systeminfo  - Show system information
+disk    - Show disk storage device
+diskinfo    - Sow detailed disk information
+allocate_disk   - Allocate disk space to a file
+free_disk   -Free alocated disk space
 """)
 
 def start_minios():
@@ -242,6 +247,36 @@ Language: Python
 
         elif command == "memory":
             show_memory()
+
+        elif command == "disk":
+            show_disk()
+
+        elif command == "diskinfo":
+            disk_info()
+
+        elif command.startswith("allocate_disk "):
+            parts = command.split()
+
+            if len(parts) != 3:
+                print("Usage: allocate_disk <filename> <size>")
+            else:
+                filename = parts[1]
+
+                try:
+                    size = int(parts[2])
+                    allocate_disk(filename, size)
+
+                except ValueError:
+                    print("Disk size must be a number.")
+
+        elif command.startswith("free_disk"):
+            filename = command[10:]
+
+            if not filename:
+                print("Usage: free_disk <filename>")
+            else:
+                free_disk_space(filename)
+        
 
         elif command.startswith("allocate "):
             parts = command.split()
