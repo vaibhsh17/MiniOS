@@ -21,3 +21,8 @@
 - System Statistics
 - Security & System Commands
 - Persistent User and Disk Data
+
+<div align="center">
+
+## OS Concepts Demonstrated
+</div>
