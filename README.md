@@ -9,3 +9,15 @@
 
 ## 🚀 Features
 </div>
+
+- File Management
+- Process Management
+- Memory Management
+- CPU Scheduling
+- User Management
+- File Permissions
+- Disk & Storage Management
+- System Monitoring
+- System Statistics
+- Security & System Commands
+- Persistent User and Disk Data
