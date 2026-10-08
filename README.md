@@ -7,7 +7,7 @@
 
 <div align="center">
 
-## 🚀 Features
+## 🚀 **Features**
 </div>
 
 - File Management
