@@ -26,3 +26,5 @@
 
 ## OS Concepts Demonstrated
 </div>
+
+MiniOS demonstrates important operating system concepts in a simple and interactive enviourment.
