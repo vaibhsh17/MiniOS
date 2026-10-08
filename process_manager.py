@@ -15,7 +15,7 @@ def start_process(name, burst_time, priority):
 
     print(
         f"process '{name}' started"
-        f"with burst time {burst_time} ms."
+        f"with burst time {burst_time} ms"
         f"and priority {priority}."
     )
 
@@ -38,7 +38,7 @@ def stop_process(name):
     for process in processes:
         if process["name"] == name:
             processes.remove(process)
-            print(f"process '{name}' stopped")
+            print(f"process '{name}' stopped.")
             return
 
     print("Process not found.")

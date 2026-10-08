@@ -40,14 +40,15 @@ def create_file(filename, owner="admin"):
 
 
 def check_permissions(filename, username, action):
+
+    if username == "admin":
+        return True
+
     if filename not in file_permissions:
         return False
 
     permission = file_permissions[filename]
     owner = permission["owner"]
-
-    if username == "admin":
-        return True
 
     if username == owner:
         return permission[action]

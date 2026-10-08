@@ -4,6 +4,7 @@ from file_manager import create_file, write_file, read_file, delete_file
 from process_manager import start_process, list_processes, stop_process, processes
 from memory_manager import show_memory, allocate_memory, free_memory
 from disk_manager import show_disk, disk_info, allocate_disk, free_disk_space
+from system_monitor import system_status, process_monitor, memory_monitor, disk_monitor, system_statistics, monitoring_dashboard
 from cpu_schedulor import fcfs_schedule, round_robin_schedule, priority_schedule
 from user_manager import create_user, list_users, login_user, get_user_role
 
@@ -61,9 +62,15 @@ ls  - List files and folders
 date    - Show current date and time
 systeminfo  - Show system information
 disk    - Show disk storage device
-diskinfo    - Sow detailed disk information
+diskinfo    - Show detailed disk information
 allocate_disk   - Allocate disk space to a file
-free_disk   -Free alocated disk space
+free_disk   - Free allocated disk space
+system_status   - Show overall system status
+process_monitor - Show running process details
+memory_monitor  - Show detailed memory usage
+disk_monitor    - Show detailed disk usage
+system_statics  -  Show system usage statistics
+dashboard   - Show complete system monitoring dashboard
 """)
 
 def start_minios():
@@ -78,7 +85,7 @@ Type 'help' to see commands.
     current_user = "admin"
 
     while True:
-        command = input("MiniOS> ")
+        command = input("MiniOS> ").strip()
 
         if command == "help":
             show_help()
@@ -89,9 +96,16 @@ Type 'help' to see commands.
         elif command == "clear":
             clear_screen()
 
+        elif command == "create":
+            print("Usage: create <filename>")
+        
         elif command.startswith("create "):
-            filename = command[7:]
-            create_file(filename, current_user)
+            filename = command[7:].strip()
+
+            if not filename:
+                print("Usage: create <filename>")
+            else:
+                create_file(filename, current_user)
 
         elif command.startswith("create_user "):
             parts = command.split()
@@ -110,6 +124,9 @@ Type 'help' to see commands.
 
         elif command == "users":
                 list_users()
+
+        elif command == "write":
+            print("Usage: write <filename> <content>")
 
         elif command.startswith("write "):
             parts = command.split(" ", 2)
@@ -149,7 +166,7 @@ Type 'help' to see commands.
             print("Logged out successfully.")
 
         elif command == "whoami":
-            print(f"current user: {current_user}")
+            print(f"Current User: {current_user}")
 
         elif command == "pwd":
             print(os.getcwd())
@@ -179,28 +196,49 @@ OS Name: MiniOS
 Version: 1.0
 Language: Python
 """)
-            print(f"Current_User: {current_user}")
+            print(f"Current User: {current_user}")
             print(f"Working Directory: {os.getcwd()}")
             print("===============================")
 
-        elif command.startswith("role "):
-            username = command[5:]
+        elif command == "system_status":
+            system_status(processes)
 
-            role = get_user_role(username)
+        elif command == "process_monitor":
+            process_monitor(processes)
 
-            if role:
-                print(f"User '{username}' has role: {role}")
-            else:
-                print("User not found.")
+        elif command == "memory_monitor":
+            memory_monitor()
 
+        elif command == "disk_monitor":
+            disk_monitor()
+
+        elif command == "system_statistics":
+            system_statistics(processes)
+
+        elif command == "dashboard":
+            monitoring_dashboard(processes)
+
+        elif command == "read":
+            print("Usage: read <filename>")
 
         elif command.startswith("read "):
-            filename = command[5:]
-            read_file(filename, current_user)
+            filename = command[5:].strip()
+
+            if not filename:
+                print("Usage: read <filename>")
+            else:
+                read_file(filename, current_user)
+
+        elif command == "delete":
+            print("Usage: delete <filename>")
 
         elif command.startswith("delete "):
-            filename = command[7:]
-            delete_file(filename, current_user)
+            filename = command[7:].strip()
+
+            if not filename:
+                print("Usage: read <filename>")
+            else:
+                delete_file(filename, current_user)
 
         elif command.startswith("start "):
             parts = command.split()
@@ -269,7 +307,7 @@ Language: Python
                 except ValueError:
                     print("Disk size must be a number.")
 
-        elif command.startswith("free_disk"):
+        elif command.startswith("free_disk "):
             filename = command[10:]
 
             if not filename:
