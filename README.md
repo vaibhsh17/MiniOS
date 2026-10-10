@@ -1,30 +1,6 @@
 <div align="center">
 
-## **MiniOS - Education OS Simulator**
+## MiniOS - Educational Operating System Simulator
 </div>
 
-- An educational operating system simulator built with Python, designed to demonstrate core Operating System concepts through an interactive command-line environment.
-
-<div align="center">
-
-## 🚀 **Features**
-</div>
-
-- File Management
-- Process Management
-- Memory Management
-- CPU Scheduling
-- User Management
-- File Permissions
-- Disk & Storage Management
-- System Monitoring
-- System Statistics
-- Security & System Commands
-- Persistent User and Disk Data
-
-<div align="center">
-
-## OS Concepts Demonstrated
-</div>
-
-MiniOS demonstrates important operating system concepts in a simple and interactive enviourment.
+- MiniOS is a python-based educational operating system simulator designed to help students understand the fundamental concepts, resposibilities and working principles of an  Operating System (OS) through an  interactive command-line interface.
