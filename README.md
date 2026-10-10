@@ -11,7 +11,7 @@
 
 <div align="center">
 
-## table of Content
+## Table of Contents
 </div>
 
 - What is an Operating System?
@@ -33,4 +33,10 @@
 
 **Main Responsibilities of an OS**
 
--Process Management: Manages running program and their execution.
+- Process Management: Manages running program and their execution.
+- Memory Management: Allocates and releases memory for processes.
+- File Management: Organizes files and controls file access.
+- CPU Scheduling: Determines which process gets CPU time.
+- Device Management: Coordinates access to hardware devices.
+- Storage Management: Tracks and manages storage space.
+- Security and Protection: Controls access to resources.
