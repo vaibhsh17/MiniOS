@@ -92,3 +92,12 @@ A simplified view of How a computer system operates:
 | CPU | RAM | Disk | Devices  |
 +-----------------------------+
 ```
+
+**Basic Working Process**
+- The user intracts with an application or command interface.
+- The application requests an operation from the operating system.
+- The OS manages access to resources and perform the required work.
+- The hardware executes the relevant operations.
+- The result is returned to the application or user.
+
+This is a simplified model; actual operating system use mechanism such as system calls, kernal services, intrrupts, device drivers and hardware protection.
