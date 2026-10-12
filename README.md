@@ -102,3 +102,21 @@ A simplified view of How a computer system operates:
 - The result is returned to the application or user.
 
 This is a simplified model; actual operating system use mechanism such as system calls, kernal services, intrrupts, device drivers and hardware protection.
+
+## 🚀 What is MiniOS?
+
+MiniOS is a command-line-based educational project implemented in Python.
+
+Its purpose is to simulate selected operating system concepts so user can explore how resource management
+and common system operations work.
+
+MiniOS provides commands for managing virtual processes, memory allocations, file-permissions, disk allocations, and system monitoring.
+
+It is intended for learning, experimentation and understanding basic OS concepts-not for replacing a real operating system.
+
+<div align="center">
+
+## 🔄 How MiniOS Works
+</div>
+
+MiniOS starts through its Python entry point main.py, which displays a welcome message and accepts command through an interactive command-line shell.
