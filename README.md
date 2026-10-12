@@ -49,3 +49,46 @@
 The main purpose of an operating system is to make  a computer easier and safer to use while managing its hardware and software resources efficiently.
 
 > Without an operating system, applications would need to handle how many low-level hardware operations themselves.
+
+**An OS helps to**:
+- Provide an  interface between the user and the computer.
+- Executes and manage programs.
+- Allocate CPU time and memory.
+- Organize files and storage.
+- Control and access to resources.
+- Coordinate input and output operations.
+- Detect and handle certain errors.
+- Use available resources efficiently.
+
+<div align="center">
+
+## ⚙️ How does an Operating system Works?
+</div>
+A simplified view of How a computer system operates:
+```
++-----------------------------+
+|            User             |
++-----------------------------+
+              |
+              v
++-----------------------------+
+| Applications / User Commands|
++-----------------------------+
+              |
+              v
++-----------------------------+
+|       Operating System      |
+|                             |
+|  Process Management         |
+|  Memory Management          |
+|  File Management            |
+|  CPU Scheduling             |
+|  Storage & Security         |
++-----------------------------+
+              |
+              v
++-----------------------------+
+|           Hardware          |
+| CPU | RAM | Disk | Devices  |
++-----------------------------+
+```
