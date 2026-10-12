@@ -40,3 +40,12 @@
 - Device Management: Coordinates access to hardware devices.
 - Storage Management: Tracks and manages storage space.
 - Security and Protection: Controls access to resources.
+
+<div align="center">
+
+## 🎯Purpose of an Operating System
+</div>
+
+The main purpose of an operating system is to make  a computer easier and safer to use while managing its hardware and software resources efficiently.
+
+> Without an operating system, applications would need to handle how many low-level hardware operations themselves.
