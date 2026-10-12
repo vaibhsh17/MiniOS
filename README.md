@@ -65,6 +65,7 @@ The main purpose of an operating system is to make  a computer easier and safer 
 ## ⚙️ How does an Operating system Works?
 </div>
 A simplified view of How a computer system operates:
+
 ```
 +-----------------------------+
 |            User             |
