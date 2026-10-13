@@ -120,3 +120,22 @@ It is intended for learning, experimentation and understanding basic OS concepts
 </div>
 
 MiniOS starts through its Python entry point main.py, which displays a welcome message and accepts command through an interactive command-line shell.
+
+```
+================================
+        Welcome to MiniOS
+================================
+Educational OS Simulator
+Type 'help' to see commands.
+
+MiniOS>
+```
+Command Execution Flow
+1. Start: Rum main.py using python.
+2. Input: Enter a command at MiniOS> Prompt.
+3. Processing: MiniOS identifies the command and its arguments.
+4. Module Execution: The relevant Python module performs the requested.
+5. Output: MiniOS displays the result, status or error messages.
+6. Repeat: The shell waits for the next commands.
+
+For Examole: A memory allocation command is handled by the memory-management module, while a disk allocation command is handled by the disk-management module.
