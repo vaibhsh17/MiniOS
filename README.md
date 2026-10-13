@@ -165,3 +165,26 @@ For Examole: A memory allocation command is handled by the memory-management mod
 
 ## 🧠 Operating System Concepts Demonstrated
 </div>
+
+<div align=""center>
+
+| OS Concept | MiniOS Demonstration |
+|---|---|
+| Process Management | Start, list, and stop simulated processes |
+| CPU Scheduling | FCFS, Round Robin, and Priority Scheduling |
+| Memory Management | Allocate and release memory |
+| File Management | Create, read, write, and delete files |
+| Protection | Basic user-based file permissions |
+| User Management | User creation and login checks |
+| Storage Management | Simulated disk allocation and release |
+| Resource Monitoring | Memory, disk, and process statistics |
+| Data Persistence | JSON-based application data storage |
+| Command Interface | Interactive command-line shell |
+</div>
+
+<div align="cenetr">
+
+## ⌨️ Commands
+</div>
+
+Type help inside MiniOS to see the commands supported by your current implementation.
