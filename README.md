@@ -160,3 +160,8 @@ For Examole: A memory allocation command is handled by the memory-management mod
 8. System Monitoring:  Display simulated process information, memory usage, disk usage and overall system statistics thorough a monitoring dashboard.
 9. System Commands:  Provide utility commands for displaying the current user, listing files, showing the current directory and date, viewing system information, clearing the terminal and logging out.
 10. Data Persistance:  Use JOSN files to retain selected application data between execution,  including user information, and disk allocations.
+
+<div align="center">
+
+## 🧠 Operating System Concepts Demonstrated
+</div>
