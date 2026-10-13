@@ -139,3 +139,24 @@ Command Execution Flow
 6. Repeat: The shell waits for the next commands.
 
 For Examole: A memory allocation command is handled by the memory-management module, while a disk allocation command is handled by the disk-management module.
+
+<div align="center">
+
+## ✨ Features
+</div>
+
+1. File Management:  Create, write, read and delete files using the command-line interface. File permissions determine whether a user can perform a particular operation.
+2. Process Management:  Create simulated process entries, display running processes. Each process can include a process ID, name, burst time, and priority.
+3. Memory Management:  allocate memory to named processes, track memory usage, display free memory, and release allocations.
+4. CPU Scheduling:
+   Deminstrate three scheduling a algorithms:
+   - First Come, First Served (FCFS)
+   - Round Robin
+   - Priority Scheduling
+  The simulator displays scheduling information and calculated execution time based on the supplied process data.
+5. User Management:  Create user account, list users and check login credential through the user-management module.
+6. File Permissions:  Demonstrate basic  access control for file reading, writing and deletion.
+7. Disk and Storage Management:  Simulate disk-space allocation, freeing allocated space and displaying total, used and free capacity
+8. System Monitoring:  Display simulated process information, memory usage, disk usage and overall system statistics thorough a monitoring dashboard.
+9. System Commands:  Provide utility commands for displaying the current user, listing files, showing the current directory and date, viewing system information, clearing the terminal and logging out.
+10. Data Persistance:  Use JOSN files to retain selected application data between execution,  including user information, and disk allocations.
