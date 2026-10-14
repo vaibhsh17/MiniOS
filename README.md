@@ -288,3 +288,24 @@ Module Responsibilities
 | `system_monitor.py` | System status, resource monitoring, and statistics |
 | `.gitignore` | Excludes selected local and generated files |
 | `README.md` | Project documentation |
+
+<div align="center">
+
+## 🛠️ Technologies Used
+</div>
+
+- Python:  Core programming language.
+- JSON:    Stores selected application data between runs.
+- Command-Line Interface (CLI):  Provides an interactive user interface.
+- GitHub:  Version control and project hosting.
+
+<div align="center">
+
+## ▶️ Installation and Execution
+</div>
+Prerequisites
+
+Step 1: Clone the Repo
+```
+git clone https://github.com/vaibhsh17/MiniOS.git
+```
