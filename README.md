@@ -253,3 +253,38 @@ systeminfo
 clear
 logout
 ```
+Note:  Command name and argument formats must match the implementation in main.py. Use help to confirm the commands available in your current version.
+
+<div align="center">
+
+## 📂 Project Structure
+</div>
+
+```
+MiniOS/
+├── main.py
+├── file_manager.py
+├── process_manager.py
+├── memory_manager.py
+├── cpu_schedulor.py
+├── user_manager.py
+├── disk_manager.py
+├── system_monitor.py
+├── .gitignore
+└── README.md
+```
+Module Responsibilities
+
+
+| File | Responsibility |
+|---|---|
+| `main.py` | Main entry point, command loop, and command routing |
+| `file_manager.py` | File operations and file permissions |
+| `process_manager.py` | Simulated process management |
+| `memory_manager.py` | Memory allocation and usage tracking |
+| `cpu_schedulor.py` | CPU scheduling algorithms |
+| `user_manager.py` | User creation, login checks, and roles |
+| `disk_manager.py` | Disk-space allocation and tracking |
+| `system_monitor.py` | System status, resource monitoring, and statistics |
+| `.gitignore` | Excludes selected local and generated files |
+| `README.md` | Project documentation |
