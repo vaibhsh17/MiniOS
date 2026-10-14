@@ -188,3 +188,68 @@ For Examole: A memory allocation command is handled by the memory-management mod
 </div>
 
 Type help inside MiniOS to see the commands supported by your current implementation.
+File Management
+
+```
+create <filename>
+write <filename> <content>
+read <filename>
+delete <filename>
+```
+Process Management
+
+```
+start <name> <burst_time> <priority>
+processes
+stop <name>
+```
+Memory Management
+
+```
+memory
+allocate <process> <size>
+free <process>
+```
+CPU Scheduling
+
+```
+fcfs
+rr <quantum>
+priority
+```
+User Management
+
+```
+createuser <username> <password>
+users
+login <username> <password>
+```
+Disk Management
+
+```
+disk
+diskinfo
+allocate_disk <filename> <size>
+free_disk <filename>
+```
+System Monitoring
+
+```
+system_status
+process_monitor
+memory_monitor
+disk_monitor
+system_statistics
+dashboard
+```
+System Utilities
+
+```
+whoami
+pwd
+ls
+date
+systeminfo
+clear
+logout
+```
