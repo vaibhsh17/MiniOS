@@ -299,13 +299,12 @@ Module Responsibilities
 - Command-Line Interface (CLI):  Provides an interactive user interface.
 - GitHub:  Version control and project hosting.
 
-<div align="center">
-
-## ▶️ Installation and Execution
-</div>
-Prerequisites
-
-Step 1: Clone the Repo
+# Clone the Repo
 ```
 git clone https://github.com/vaibhsh17/MiniOS.git
+````
+# Explore commands
 ```
+help
+```
+- Then try the available commands and observe how MiniOS responds.
