@@ -320,3 +320,9 @@ MiniOS stores selected information in JSON files.
 - disk_storage.json — disk allocation records.
 
 > These files are generated locally as the application runs and are excluded from version control through .gitignore.
+
+<div align="center">
+
+## 🎓 Learning Goals
+</div>
+
