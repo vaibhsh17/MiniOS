@@ -299,12 +299,24 @@ Module Responsibilities
 - Command-Line Interface (CLI):  Provides an interactive user interface.
 - GitHub:  Version control and project hosting.
 
-# Clone the Repo
+## Clone the Repo
 ```
 git clone https://github.com/vaibhsh17/MiniOS.git
 ````
-# Explore commands
+## Explore commands
 ```
 help
 ```
 - Then try the available commands and observe how MiniOS responds.
+
+<div align="center">
+
+## 💾 Persistence
+</div>
+MiniOS stores selected information in JSON files.
+
+- users.json — user account data.
+- file_permissions.json — file permision records.
+- disk_storage.json — disk allocation records.
+
+> These files are generated locally as the application runs and are excluded from version control through .gitignore.
