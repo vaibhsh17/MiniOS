@@ -323,6 +323,13 @@ MiniOS stores selected information in JSON files.
 
 <div align="center">
 
-## 🎓 Learning Goals
+## 🎓 Learning Objectives
 </div>
 
+- Understanding the responisibilities of an operating system.
+- Organizing a Python project into seperate modules.
+- Working with functions, dictionaries, lists and file operations.
+- Implementing command parsing and input validation.
+- Simulating process, memory and disk resource management.
+- Understanding basic scheduling algorithms.
+- Persisting application data using JSON.
