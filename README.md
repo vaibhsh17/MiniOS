@@ -152,7 +152,7 @@ For Examole: A memory allocation command is handled by the memory-management mod
 3. **Memory Management**:  allocate memory to named processes, track memory usage, display free memory, and release allocations.
 
 4. **CPU Scheduling**:
-   Deminstrate three scheduling a algorithms:
+   It Demonstrate three scheduling a algorithms:
    - First Come, First Served (FCFS)
    - Round Robin
    - Priority Scheduling
@@ -328,7 +328,7 @@ MiniOS stores selected information in JSON files.
 - file_permissions.json — file permision records.
 - disk_storage.json — disk allocation records.
 
-> These files are generated locally as the application runs and are excluded from version control through .gitignore.
+> These files are generated locally as the application runs and are excluded from version control through `.gitignore`.
 
 <div align="center">
 
@@ -342,3 +342,10 @@ MiniOS stores selected information in JSON files.
 - Simulating process, memory and disk resource management.
 - Understanding basic scheduling algorithms.
 - Persisting application data using JSON.
+
+<div align="center">
+
+## 👨‍💻 Owner
+</div>
+
+- This project is created and maintained by - **[Vaibhav](https://github.com/vaibhsh17)**.
