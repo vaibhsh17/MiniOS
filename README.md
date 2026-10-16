@@ -145,21 +145,30 @@ For Examole: A memory allocation command is handled by the memory-management mod
 ## ✨ Features
 </div>
 
-1. File Management:  Create, write, read and delete files using the command-line interface. File permissions determine whether a user can perform a particular operation.
-2. Process Management:  Create simulated process entries, display running processes. Each process can include a process ID, name, burst time, and priority.
-3. Memory Management:  allocate memory to named processes, track memory usage, display free memory, and release allocations.
-4. CPU Scheduling:
+1. **File Management**:  Create, write, read and delete files using the command-line interface. File permissions determine whether a user can perform a particular operation.
+
+2. **Process Management**:  Create simulated process entries, display running processes. Each process can include a process ID, name, burst time, and priority.
+
+3. **Memory Management**:  allocate memory to named processes, track memory usage, display free memory, and release allocations.
+
+4. **CPU Scheduling**:
    Deminstrate three scheduling a algorithms:
    - First Come, First Served (FCFS)
    - Round Robin
    - Priority Scheduling
   The simulator displays scheduling information and calculated execution time based on the supplied process data.
-5. User Management:  Create user account, list users and check login credential through the user-management module.
-6. File Permissions:  Demonstrate basic  access control for file reading, writing and deletion.
-7. Disk and Storage Management:  Simulate disk-space allocation, freeing allocated space and displaying total, used and free capacity
-8. System Monitoring:  Display simulated process information, memory usage, disk usage and overall system statistics thorough a monitoring dashboard.
-9. System Commands:  Provide utility commands for displaying the current user, listing files, showing the current directory and date, viewing system information, clearing the terminal and logging out.
-10. Data Persistance:  Use JOSN files to retain selected application data between execution,  including user information, and disk allocations.
+
+5. **User Management**:  Create user account, list users and check login credential through the user-management module.
+  
+6. **File Permissions**:  Demonstrate basic  access control for file reading, writing and deletion.
+
+7. **Disk and Storage Management**:  Simulate disk-space allocation, freeing allocated space and displaying total, used and free capacity.
+
+8. **System Monitoring**:  Display simulated process information, memory usage, disk usage and overall system statistics thorough a monitoring dashboard.
+
+9. **System Commands**:  Provide utility commands for displaying the current user, listing files, showing the current directory and date, viewing system information, clearing the terminal and logging out.
+
+10. **Data Persistance**:  Use JOSN files to retain selected application data between execution,  including user information, and disk allocations.
 
 <div align="center">
 
@@ -182,13 +191,13 @@ For Examole: A memory allocation command is handled by the memory-management mod
 | Command Interface | Interactive command-line shell |
 </div>
 
-<div align="cenetr">
+<div align="center">
 
 ## ⌨️ Commands
 </div>
 
 Type help inside MiniOS to see the commands supported by your current implementation.
-File Management
+**File Management**
 
 ```
 create <filename>
@@ -196,35 +205,35 @@ write <filename> <content>
 read <filename>
 delete <filename>
 ```
-Process Management
+**Process Management**
 
 ```
 start <name> <burst_time> <priority>
 processes
 stop <name>
 ```
-Memory Management
+**Memory Management**
 
 ```
 memory
 allocate <process> <size>
 free <process>
 ```
-CPU Scheduling
+**CPU Scheduling**
 
 ```
 fcfs
 rr <quantum>
 priority
 ```
-User Management
+**User Management**
 
 ```
 createuser <username> <password>
 users
 login <username> <password>
 ```
-Disk Management
+**Disk Management**
 
 ```
 disk
@@ -232,7 +241,7 @@ diskinfo
 allocate_disk <filename> <size>
 free_disk <filename>
 ```
-System Monitoring
+**System Monitoring**
 
 ```
 system_status
@@ -242,7 +251,7 @@ disk_monitor
 system_statistics
 dashboard
 ```
-System Utilities
+**System Utilities**
 
 ```
 whoami
@@ -253,7 +262,7 @@ systeminfo
 clear
 logout
 ```
-Note:  Command name and argument formats must match the implementation in main.py. Use help to confirm the commands available in your current version.
+**Note**:  Command name and argument formats must match the implementation in main.py. Use help to confirm the commands available in your current version.
 
 <div align="center">
 
