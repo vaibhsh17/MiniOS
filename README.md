@@ -349,3 +349,10 @@ MiniOS stores selected information in JSON files.
 </div>
 
 - This project is created and maintained by - **[Vaibhav](https://github.com/vaibhsh17)**.
+
+<div align="center">
+
+## 🤝 Contribution
+</div>
+
+- Contributors are most welcome to contribute and impove it well.
