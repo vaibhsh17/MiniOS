@@ -323,10 +323,9 @@ help
 ## 💾 Persistence
 </div>
 - MiniOS stores selected information in JSON files.
-
-  - users.json — user account data.
-  - file_permissions.json — file permision records.
-  - disk_storage.json — disk allocation records.
+   - users.json — user account data.
+   - file_permissions.json — file permision records.
+   - disk_storage.json — disk allocation records.
 
 > These files are generated locally as the application runs and are excluded from version control through `.gitignore`.
 
