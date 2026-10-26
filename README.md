@@ -130,7 +130,7 @@ Type 'help' to see commands.
 
 MiniOS>
 ```
-Command Execution Flow
+**Command Execution Flow**:
 1. Start: Rum main.py using python.
 2. Input: Enter a command at MiniOS> Prompt.
 3. Processing: MiniOS identifies the command and its arguments.
