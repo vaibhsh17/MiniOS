@@ -31,7 +31,7 @@
 - Future Improvements
 - Author
 
-**Main Responsibilities of an OS**
+**Main Responsibilities of an OS**:
 
 - Process Management: Manages running program and their execution.
 - Memory Management: Allocates and releases memory for processes.
