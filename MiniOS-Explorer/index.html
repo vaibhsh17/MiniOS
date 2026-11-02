@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniOS | Project File Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="navbar">
+    <a href="#overview" class="brand">
+      <div class="logo">M<small>OS</small></div>
+      <div>
+        <h2>MiniOS</h2>
+        <span>PROJECT FILE EXPLORER</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#explorer">Explore Files</a>
+      <a href="#workflow">How It Works</a>
+      <a href="#terminal">Terminal</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="overview">
+      <div class="hero-content">
+        <p class="eyebrow">
+          PYTHON · EDUCATIONAL OS SIMULATOR
+        </p>
+
+        <h1>
+          Explore MiniOS,
+          <span>One file at a time.</span>
+        </h1>
+
+        <p class="intro">
+          Learn what each MiniOS project file does,
+          why it is needed and how different Python
+          modules work together.
+        </p>
+
+        <a href="#explorer" class="primary-btn">
+          Explore Project Files ↓
+        </a>
+
+        <div class="stats">
+          <div>
+            <strong>Python</strong>
+            <small>Core Language</small>
+          </div>
+
+          <div>
+            <strong>Modular</strong>
+            <small>Separate Responsibilities</small>
+          </div>
+
+          <div>
+            <strong>Educational</strong>
+            <small>Learn OS Concepts</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="overview-card">
+        <div class="card-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span>MiniOS Project Structure</span>
+        </div>
+
+        <div class="file-tree">
+          <p>📁 MiniOS</p>
+          <p>　📄 main.py</p>
+          <p>　📄 file_manager.py</p>
+          <p>　📄 process_manager.py</p>
+          <p>　📄 memory_manager.py</p>
+          <p>　📄 cpu_schedulor.py</p>
+          <p>　📄 user_manager.py</p>
+          <p>　📄 disk_manager.py</p>
+          <p>　📄 system_monitor.py</p>
+        </div>
+
+        <p class="tree-note">
+          Select a file below to understand its purpose.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="explorer">
+      <p class="eyebrow">PROJECT BREAKDOWN</p>
+
+      <h2>What Does Each File Do?</h2>
+
+      <p class="section-intro">
+        Click any file to learn its purpose,
+        responsibilities, and role in MiniOS.
+      </p>
+
+      <div class="explorer-layout">
+
+        <aside class="file-panel">
+          <h3 class="panel-heading">📁 MiniOS Files</h3>
+
+          <button class="file-button active"
+            data-file="main">
+          <span class="file-icon">PY</span>
+          <span>
+                    <b>main.py</b>
+              <small>Main Program</small>
+            </span>
+          </button>
+
+          <button class="file-button"
+            data-file="file">
+            <span class="file-icon">PY</span>
+            <span>
+              <b>file_manager.py</b>
+              <small>File Operations</small>
+            </span>
+          </button>
+
+          <button class="file-button"
+            data-file="process">
+            <span class="file-icon">PY</span>
+            <span>
+              <b>process_manager.py</b>
+              <small>Process Management</small>
+            </span>
+          </button>
+
+          <button class="file-button"
+            data-file="memory">
+            <span class="file-icon">PY</span>
+            <span>
+              <b>memory_manager.py</b>
+              <small>Memory Management</small>
+            </span>
+          </button>
+
+          <button class="file-button"
+            data-file="cpu">
+            <span class="file-icon">PY</span>
+            <span>
+              <b>cpu_schedulor.py</b>
+              <small>CPU Scheduling</small>
+            </span>
+          </button>
+
+          <button class="file-button"
+            data-file="user">
+            <span class="file-icon">PY</span>
+            <span>
+              <b>user_manager.py</b>
+              <small>User Management</small>
+            </span>
+          </button>
+
+          <button class="file-button"
+            data-file="disk">
+            <span class="file-icon">PY</span>
+            <span>
+              <b>disk_manager.py</b>
+              <small>Disk Management</small>
+            </span>
+          </button>
+
+          <button class="file-button"
+            data-file="monitor">
+            <span class="file-icon">PY</span>
+            <span>
+              <b>system_monitor.py</b>
+              <small>System Monitoring</small>
+            </span>
+          </button>
+
+        </aside>
+
+        <article class="details-panel">
+          <div class="detail-heading">
+            <span class="file-icon" id="detailIcon">PY</span>
+
+            <div>
+              <p class="eyebrow">SELECTED FILE</p>
+              <h3 id="detailName">main.py</h3>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h4>What is this file?</h4>
+            <p id="detailSummary">
+              The main entry point of MiniOS.
+            </p>
+          </div>
+
+          <div class="detail-section">
+            <h4>Purpose:</h4>
+            <p id="detailPurpose">
+              It connects the command-line interface
+              with the different project modules.
+            </p>
+          </div>
+
+          <div class="detail-section">
+            <h4>What does it do?</h4>
+            <ul id="detailTask">
+              <li>Starts the command-interface.</li>
+              <li>Reads user commands.</li>
+              <li>Routes commands to relevant modules.</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h4>Connection with other files:</h4>
+            <p id="detailConnection">
+              It coordinates the modules that perform
+              individual MiniOS operations.
+            </p>
+          </div>
+
+          <div class="detail-section importance-section">
+            <h4>Why Is This File Important?</h4>
+            <p id="detailImportance">
+              This file acts as the central control point of MiniOS
+              and connects the command-line interface with different modules.
+            </p>
+          </div>
+
+          <p class="note">
+            These are educational summaries of the project files.
+            Check the Python source code for implementation details.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section workflow" id="workflow">
+      <p class="eyebrow">UNDERSTAND THE PROCESS</p>
+
+      <h2>How MiniOS Works</h2>
+
+      <p class="section-intro">
+        Follow how a user command moves through MiniOS
+        and how the different modules work together
+      </p>
+
+      <div class="steps">
+        <article>
+          <span>01</span>
+          <h3>Input</h3>
+          <p>The user enters a command.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>main.py</h3>
+          <p>The main program processes the command.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>Module</h3>
+          <p>The relevant module handles the operation.</p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>Output</h3>
+          <p>The program displays the result.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="terminal">
+      <p class="eyebrow">INTERACTIVE MINI OS</p>
+
+        <h2>MiniOS Web Terminal</h2>
+
+        <p class="section-intro">
+          Enter a command and interact with the MiniOS Python backend.
+        </p>
+
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span>MiniOS Terminal</span>
+          </div>
+
+          <div id="terminalOutput" class="terminal-output">
+            <p>Welcome to MiniOS Web Terminal</p>
+            <p>Type <b>help</b> to see available command.</p>
+          </div>
+
+          <form id="commandForm" class="terminal-input">
+            <label for="commandInput">MiniOS &gt;</label>
+            <input
+              type="text"
+              id="commandInput"
+              placeholder="Enter command..."
+              autocomplete="off"
+              required
+            >
+            <button type="submit">Run</button>
+          </form>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>MiniOS</strong>
+    <p>Educational Operating System Simulator · Python</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
