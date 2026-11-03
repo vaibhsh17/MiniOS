@@ -2,7 +2,13 @@ from flask import Flask, jsonify, request, send_from_directory
 from contextlib import redirect_stdout
 from io import StringIO
 
-from process_manager import start_process, list_processes, stop_process
+from process_manager import start_process, list_processes, stop_process, get_processes
+from cpu_schedulor import (
+    fcfs_schedule,
+    round_robin_schedule,
+    priority_schedule,
+    compare_scheduling
+)
 from memory_manager import show_memory
 from file_manager import create_file, write_file, read_file, delete_file
 from disk_manager import show_disk, disk_info, allocate_disk, free_disk_space
@@ -60,6 +66,10 @@ def execute_command():
             "diskinfo - Show disk information\n"
             "allocate_disk <filename> <size> - Allocate disk space\n"
             "free_disk <filename> - Free allocated disk space\n"
+            "fcfs - Run First Come First served scheduling\n"
+            "rr <quantom> - Run Round Robin Schedling\n"
+            "priority - Run Priority Scheduling\n"
+            "compare <quantom> - Compare CPU Scheduling Algorithms\n"
         )
 
     elif command == "info":
@@ -99,6 +109,38 @@ def execute_command():
                 stop_process(name)
 
             result = output.getvalue() or f"stop command sent for `{name}`."
+
+    elif command == "fcfs":
+        processes = get_processes()
+
+        with redirect_stdout(output):
+            fcfs_schedule(processes)
+
+        result = output.getvalue()
+
+    elif parts[0].lower() == "rr":
+        if len(parts) != 2:
+            result = "Usage: rr <quantom>"
+        else:
+            try:
+                quantom = int(parts[1])
+                processes = get_processes()
+
+                with redirect_stdout(output):
+                    round_robin_schedule(processes, quantom)
+
+                result = output.getvalue()
+
+            except ValueError:
+                result = "Quantom must be a number."
+
+    elif command == "priority":
+        processes = get_processes()
+
+        with redirect_stdout(output):
+            priority_schedule(processes)
+
+        result = output.getvalue()
 
     elif parts[0].lower() == "create":
         if len(parts) != 2:
@@ -207,6 +249,22 @@ def execute_command():
                     free_disk_space(filename)
 
                 result = output.getvalue() or "Disk space operation completed."
+
+    elif parts[0].lower() == "compare":
+        if len(parts) != 2:
+            result = "Usage: compare <quantum>"
+        else:
+            try:
+                quantum = int(parts[1])
+
+                with redirect_stdout(output):
+                    compare_scheduling(get_processes(), quantum)
+
+                result = output.getvalue()
+
+            except ValueError:
+                result = "Quantum must be a number."
+
 
     else:
         return jsonify({

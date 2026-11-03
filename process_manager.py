@@ -8,37 +8,45 @@ def start_process(name, burst_time, priority):
         "pid": next_pid,
         "name": name,
         "burst_time": burst_time,
-        "priority": priority
+        "priority": priority,
+        "status": "Running"
     }
 
     processes.append(process)
 
     print(
-        f"process '{name}' started"
+        f"Process '{name}' started "
         f"with burst time {burst_time} ms"
         f"and priority {priority}."
     )
 
     next_pid += 1
 
-
 def list_processes():
     if not processes:
-        print("No running processes.")
+        print("No processes available.")
         return
 
-    print("\nPID\tProcess")
-    print("----------------")
-
     for process in processes:
-        print(f"{process['pid']}\t{process['name']}")
+        print(
+            f"{process['pid']}\t"
+            f"{process['name']}\t\t"
+            f"{process['status']}"
+        )
 
+def get_processes():
+    return processes.copy()
 
 def stop_process(name):
     for process in processes:
         if process["name"] == name:
-            processes.remove(process)
-            print(f"process '{name}' stopped.")
+
+            if process["status"] == "Stopped":
+                print(f"Process '{name}' is already stopped.")
+                return
+
+            process["status"] = "Stopped"
+            print(f"Process '{name}' stopped.")
             return
 
     print("Process not found.")
