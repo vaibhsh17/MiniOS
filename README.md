@@ -103,7 +103,10 @@ A simplified view of How a computer system operates:
 
 This is a simplified model; actual operating system use mechanism such as system calls, kernal services, intrrupts, device drivers and hardware protection.
 
+<div align="center">
+
 ## 🚀 What is MiniOS?
+</div>
 
 MiniOS is a command-line-based educational project implemented in Python.
 
